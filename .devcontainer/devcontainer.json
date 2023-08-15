@@ -1,0 +1,30 @@
+{
+    "name": "Node.js Dev Container",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "app",
+    "workspaceFolder": "/usr/src/app",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "Vue.volar",
+                "dariofuzinato.vue-peek",
+                "hollowtree.vue-snippets",
+                "esbenp.prettier-vscode",
+                "rvest.vs-code-prettier-eslint",
+                "GitHub.copilot",
+                "GitHub.copilot-chat",
+                "sdras.vue-vscode-snippets"
+            ],
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            }
+        }
+    },
+    "forwardPorts": [
+        3000
+    ],
+    "remoteUser": "node"
+}
