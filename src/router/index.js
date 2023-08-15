@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import TestingView from '../views/TestingView.vue'
 import TodosView from '../views/TodosView.vue'
 
 const router = createRouter({
@@ -7,6 +8,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      // doesn't need to lazy load as this is the default route and will load anyway
       component: TodosView
     },
     {
@@ -16,6 +18,11 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue')
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: TestingView
     }
   ]
 })
